@@ -1,0 +1,23 @@
+<canvas id="myCanvas" width="800" height="600"></canvas>
+	<script>
+	  const canvas = document.getElementById('myCanvas');
+	  const ctx = canvas.getContext('2d');
+	  function drawSquare() {
+	    const squareSize = 50; 
+	    const x = Math.random() * (canvas.width - squareSize); 
+	    const y = Math.random() * (canvas.height - squareSize); 
+	    const r = Math.floor(Math.random() * (255 - 0 + 1));
+	    const g = Math.floor(Math.random() * (255 - 0 + 1));
+	    const b = Math.floor(Math.random() * (255 - 0 + 1));
+	    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 0.1)`;
+	    ctx.fillRect(x, y, squareSize, squareSize); 
+	  }
+	  function startDrawing() {
+	    setInterval(drawSquare, 1);
+	    setInterval(drawSquare, 1);
+	    setInterval(drawSquare, 1);
+	    setInterval(drawSquare, 1);
+	    setInterval(drawSquare, 1);
+	  }
+	  startDrawing();
+	</script>
